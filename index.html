@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5-media</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <section class="video_frame">
+        <video autoplay controls muted playsinline loop>
+            <source type="video/mp4" src="media/video.mp4">
+            <!-- <source type="video/ogv" src="media/vid1.ogv">
+            <source type="video/webm" src="media/vid1.webm"> -->
+            현재 브라우저는 비디오 영상을 지원하지 않습니다.
+        </video>
+        <div class="dot_pattern"></div>
+        <div class="title">
+            <h1>Sky Line</h1>
+        </div>
+    </section>
+    <!--
+        <video> 태그 사용시 주의 사항
+        - src 속성을 태그 내부의 속성에 직접 넣지 않고 <source>라는 태그로 별도 관리 
+        - mp4라는 파일만으로도 비디오 영상을 화면에 제공하는 데 문제는 없으나 mp4, ogv, webm 파일 형식으로 동반시킴
+
+        <video> 태그의 속성
+        - autoplay : 자동재생
+        - controls : 재생, 일시정지, 진행시간 등을 표현하는 컨트롤바의 생성
+        - muted : 음소거 기능
+        - playsinline : iOS에서 영상이 재생될 수 있도록 구성해주는 특수한 속성
+    -->
+
+
+    <section class="youtube_frame">
+        <iframe class="movie_space" src="https://www.youtube.com/embed/Jqf9haCd6mM?rel=0&amp;autoplay=1&amp;loop=1&amp;playlist=Jqf9haCd6mM&amp;mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="dot_pattern"></div>
+
+    </section>
+    <!--유투브 영상 연동시 확인사항
+        &amp;          =>   html 특수문자 '&' 기호
+        autoplay=1     =>   자동재생여부를 판단(기본값 0 : 자동재생 없음)
+        loop=1         =>   반복여부설정(기본값 0 : 반복없음)
+        playlist=Jqf9haCd6mM   =>  재생목록 설정
+        mute=1         =>  음소거 여부 판단
+        유투브 영상은 브라우저 상에서 음소거를 적용하지 않았을 경우, 영상의 자동 재생이 불가능하게 구성되어 있음
+    -->
+
+    <section class="audio_frame">
+        <div class="wrap">
+            <div class="title_part">
+                <p>센과 치히로의 행방불명 OST</p>
+                <h4>Always with me</h4>
+            </div>
+            <div class="audio_part">
+                <audio autoplay controls playsinline loop>
+                    <source type="audio/mp3" src="media/aud_04.mp3">
+                    <source type="audio/ogg" src="media/aud_04.ogg">
+                    <source type="audio/wav" src="media/aud_04.wav">
+                    현재 브라우저는 오디오 음성을 지원하지 않습니다. 
+                </audio>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+</body>
+</html>
